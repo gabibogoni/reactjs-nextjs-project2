@@ -8,11 +8,14 @@ function App() {
   const reverseClass = reverse ? 'reverse' : ' ';
 
   const handleClick = () => {
-    setReverse(!reverse);
+    setReverse((reverse) => !reverse);
   };
 
   const handleCounter = () => {
-    setCounter(counter + 1);
+    // as funções de set podem receber uma função de callback;
+    // agora não utilizamos diretamente o counter utilizamos o parâmetro da função de callback que o setCounter recebe;
+    // em alguns casos é mais vatajoso utilizarmos uma função de callback, porque assim garantimos que temos o estado atual correto;
+    setCounter((c) => c + 1);
   };
 
   return (
