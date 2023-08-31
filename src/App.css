@@ -11,6 +11,10 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+
+  .reverse {
+    animation: App-logo-spin-reverse infinite 20s linear;
+  }
 }
 
 .App-header {
@@ -35,4 +39,19 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+@keyframes App-logo-spin-reverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+button {
+  margin: 10px;
+  padding: 10px;
+  font-size: 15px;
 }
